@@ -1,0 +1,5 @@
+name = Form Helper
+description = Utility functions to make it easier to construct forms with Drupal's Form API
+core = 7.x
+
+configure = admin/config/system/form-helper
