@@ -49,7 +49,7 @@ function form_helper_textfield($title, $default_value = NULL, $required = FALSE,
   else {
     $item['#title'] = $title;
   }
-  
+
   return $item;
 }
 
@@ -70,6 +70,35 @@ function form_helper_select($title, $options = array(), $default_value = NULL, $
       '#type' => 'select',
       '#title' => $title,
       '#options' => $options,
+      '#default_value' => $default_value,
+      '#required' => $required,
+  );
+}
+
+function form_helper_radios($title, $options = array(), $default_value = NULL, $required = FALSE) {
+  return array(
+      '#type' => 'radios',
+      '#title' => $title,
+      '#options' => $options,
+      '#default_value' => $default_value,
+      '#required' => $required,
+  );
+}
+
+function form_helper_checkboxes($title, $options = array(), $default_value = NULL, $required = FALSE) {
+  return array(
+      '#type' => 'checkboxes',
+      '#title' => $title,
+      '#options' => $options,
+      '#default_value' => $default_value,
+      '#required' => $required,
+  );
+}
+
+function form_helper_checkbox($title, $default_value = NULL, $required = FALSE) {
+  return array(
+      '#type' => 'checkbox',
+      '#title' => $title,
       '#default_value' => $default_value,
       '#required' => $required,
   );
