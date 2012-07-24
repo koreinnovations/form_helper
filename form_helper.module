@@ -104,3 +104,10 @@ function form_helper_checkbox($title, $default_value = NULL, $required = FALSE) 
   );
 }
 
+function form_helper_password_confirm($title, $required = FALSE) {
+  return array(
+      '#type' => 'password_confirm',
+      '#title' => $title,
+      '#required' => $required,
+  );
+}
