@@ -111,3 +111,16 @@ function form_helper_password_confirm($title, $required = FALSE) {
       '#required' => $required,
   );
 }
+
+function form_helper_hidden($value, $editable = TRUE) {
+  $field = array(
+      '#type' => 'hidden',
+  );
+  if ($editable) {
+    $field['#default_value'] = $value;
+  }
+  else {
+    $field['#value'] = $value;
+  }
+  return $field;
+}
